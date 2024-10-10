@@ -13,6 +13,12 @@
 
     <dependencies>
         <!-- Add Spring Boot dependencies or any necessary dependencies here -->
+        <!-- For example: -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!-- Add more dependencies as needed -->
     </dependencies>
 
     <build>
@@ -20,6 +26,19 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.kastro.spotify.MainClass</mainClass> <!-- Replace with your actual main class -->
+                        </manifest>
+                    </archive>
+                </configuration>
             </plugin>
         </plugins>
     </build>
