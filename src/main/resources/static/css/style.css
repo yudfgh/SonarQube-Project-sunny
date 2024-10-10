@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1DB954;
+    color: #fff;
+    text-align: center;
+}
+
+header img {
+    width: 150px;
+    margin: 20px;
+}
+
+header h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.category {
+    width: 200px;
+    margin: 20px;
+}
+
+.category img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.youtube-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    margin: 10px;
+}
