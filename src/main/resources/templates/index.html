@@ -101,7 +101,7 @@
             const visualizer = document.getElementById("visualizer");
             visualizer.innerHTML = ""; // Clear previous visualizations
 
-            const bars = 10; // Number of bars
+            const bars = 20; // Number of bars
             for (let i = 0; i < bars; i++) {
                 const bar = document.createElement("div");
                 bar.className = "bar";
@@ -110,12 +110,12 @@
 
             // Animation for bars
             setInterval(() => {
-                const height = Math.random() * 100; // Random height for bars
+                const height = Math.random() * 50 + 5; // Random height for bars (between 5 and 55)
                 const barElements = document.querySelectorAll(".bar");
                 barElements.forEach((bar) => {
                     bar.style.height = `${height}px`;
                 });
-            }, 500); // Update every 500ms
+            }, 300); // Update every 300ms
         }
     </script>
 </body>
