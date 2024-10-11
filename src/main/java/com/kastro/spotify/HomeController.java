@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-    @GetMapping("/") // Maps to the root URL
-    public String index() {
-        return "index"; // This should match the name of your HTML file in templates
+    @GetMapping("/")
+    public String home() {
+        return "index";  // This should return the name of your HTML file (without .html)
     }
 }
