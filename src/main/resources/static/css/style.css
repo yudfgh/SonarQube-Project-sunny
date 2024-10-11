@@ -20,12 +20,16 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Adds grandeur */
     width: 90%;
     max-width: 600px;
+    position: relative; /* For positioning personal logo at bottom center */
 }
 
 /* Hotstar Logo */
 .hotstar-logo {
-    width: 150px; /* Small sized logo */
+    width: 120px; /* Small sized logo */
     margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* App Title */
@@ -38,7 +42,6 @@ body {
 
 /* Footer Styling */
 .footer {
-    position: relative;
     margin-top: 40px;
 }
 
@@ -56,11 +59,28 @@ body {
     border-radius: 5px;
     text-decoration: none;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     transition: background-color 0.3s ease;
 }
 
 .youtube-button:hover {
     background-color: #00A8E1;
+}
+
+/* YouTube Icon */
+.youtube-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Personal Logo Container (at bottom center) */
+.personal-logo-container {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Personal Logo */
@@ -70,8 +90,4 @@ body {
     border-radius: 50%;
     border: 2px solid #E1E5EB;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
 }
