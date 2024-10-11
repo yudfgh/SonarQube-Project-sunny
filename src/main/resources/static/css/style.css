@@ -1,5 +1,5 @@
 body {
-    background-color: #121212;
+    background-color: #121212; /* Dark background */
     color: white;
     font-family: Arial, sans-serif;
     display: flex;
@@ -15,7 +15,7 @@ body {
 }
 
 .logo {
-    width: 150px;
+    width: 100px; /* Reduced logo size */
     margin-bottom: 20px;
 }
 
@@ -24,6 +24,8 @@ select {
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
+    background-color: #1DB954; /* Spotify Green */
+    color: white;
 }
 
 #songDetails {
@@ -37,7 +39,7 @@ select {
 }
 
 .bar {
-    width: 10px;
+    width: 6px; /* Smaller width */
     height: 20px;
     margin: 0 2px;
     background-color: green;
@@ -58,6 +60,13 @@ select {
     color: #1DB954; /* Spotify Green */
     text-decoration: none;
     margin: 0 10px;
+    display: flex;
+    align-items: center; /* Align icons and text */
+}
+
+.links img {
+    width: 20px; /* Logo size */
+    margin-right: 5px; /* Space between icon and text */
 }
 
 .links a:hover {
