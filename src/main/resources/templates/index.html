@@ -37,29 +37,38 @@
         </div>
 
         <img class="profile-img" src="https://media.licdn.com/dms/image/v2/D5603AQHJB_lF1d9OSw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718971147172?e=1733961600&v=beta&t=c5vIr7AI17HYzQ150SHGoz2AJ04Sfj_mIA80iZCpJdo" alt="Kastro's Profile Picture">
+
+        <!-- Add audio element -->
+        <audio id="audio-player" controls style="display: none;"></audio>
+        <div class="visualizer" id="visualizer"></div>
     </div>
 
     <script>
         const songs = {
             Telugu: { 
                 title: "Chuttamalle (from Devara Part 1)", 
-                url: "https://www.jiosaavn.com/song/chuttamalle-from-devara-part-1/NR4YAhNRQFc" 
+                url: "https://www.jiosaavn.com/songs/chuttamalle-from-devara-part-1/NR4YAhNRQFc",
+                image: "https://cdn.pixabay.com/photo/2018/05/08/21/29/spotify-3384019_1280.png" 
             },
             Tamil: { 
                 title: "Tiger Ka Hukum", 
-                url: "https://www.jiosaavn.com/album/tiger-ka-hukum/UIyRZsBq4DE_" 
+                url: "https://www.jiosaavn.com/album/tiger-ka-hukum/UIyRZsBq4DE_",
+                image: "https://cdn.pixabay.com/photo/2018/05/08/21/29/spotify-3384019_1280.png" 
             },
             Malayalam: { 
                 title: "Aethu Kari Raavilum", 
-                url: "https://wynk.in/music/song/aethu-kari-raavilum/pp_5143996" 
+                url: "https://wynk.in/music/song/aethu-kari-raavilum/pp_5143996", 
+                image: "https://cdn.pixabay.com/photo/2018/05/08/21/29/spotify-3384019_1280.png" 
             },
             Kannada: { 
                 title: "Salaam Rocky Bhai", 
-                url: "https://www.jiosaavn.com/song/salaam-rocky-bhai/PhBdXEFaUmo" 
+                url: "https://www.jiosaavn.com/song/salaam-rocky-bhai/PhBdXEFaUmo", 
+                image: "https://cdn.pixabay.com/photo/2018/05/08/21/29/spotify-3384019_1280.png" 
             },
             Hindi: { 
                 title: "Yeh Raatein Yeh Mausam", 
-                url: "https://gaana.com/lyrics/yeh-raaten-yeh-mausam-11" 
+                url: "https://gaana.com/lyrics/yeh-raaten-yeh-mausam-11", 
+                image: "https://cdn.pixabay.com/photo/2018/05/08/21/29/spotify-3384019_1280.png" 
             }
         };
 
@@ -73,15 +82,41 @@
                 const songItem = document.createElement("div");
                 songItem.className = "song-item";
                 songItem.innerHTML = `
-                    <img src="https://cdn.pixabay.com/photo/2018/05/08/21/29/spotify-3384019_1280.png" width="30" alt="Song Image"> 
+                    <img src="${song.image}" width="30" alt="Song Image"> 
                     ${song.title} 
-                    <a href="${song.url}" target="_blank">
-                        <button>Play</button>
-                    </a>
+                    <button onclick="playSong('${song.url}')">Play</button>
                 `;
                 songListDiv.appendChild(songItem);
             }
         });
+
+        function playSong(url) {
+            const audioPlayer = document.getElementById("audio-player");
+            audioPlayer.src = url; // Set the audio source
+            audioPlayer.play(); // Play the audio
+            visualizeSound(); // Call the function to visualize sound
+        }
+
+        function visualizeSound() {
+            const visualizer = document.getElementById("visualizer");
+            visualizer.innerHTML = ""; // Clear previous visualizations
+
+            const bars = 10; // Number of bars
+            for (let i = 0; i < bars; i++) {
+                const bar = document.createElement("div");
+                bar.className = "bar";
+                visualizer.appendChild(bar);
+            }
+
+            // Animation for bars
+            setInterval(() => {
+                const height = Math.random() * 100; // Random height for bars
+                const barElements = document.querySelectorAll(".bar");
+                barElements.forEach((bar) => {
+                    bar.style.height = `${height}px`;
+                });
+            }, 500); // Update every 500ms
+        }
     </script>
 </body>
 </html>
