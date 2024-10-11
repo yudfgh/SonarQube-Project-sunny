@@ -1,74 +1,77 @@
+/* General Styling */
 body {
-    background-color: #141B29; /* Dark background similar to Hotstar */
-    color: white;
-    font-family: 'Poppins', sans-serif; /* Changed font */
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    background-color: #F5F7FA; /* Light theme */
+    font-family: 'Poppins', sans-serif;
 }
 
-.container {
+/* App Container */
+.app-container {
     text-align: center;
-    width: 80%;
+    background-color: #FFFFFF;
+    border: 2px solid #E1E5EB;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Adds grandeur */
+    width: 90%;
+    max-width: 600px;
 }
 
-.logo {
-    width: 300px; /* Medium logo size */
+/* Hotstar Logo */
+.hotstar-logo {
+    width: 150px; /* Small sized logo */
     margin-bottom: 20px;
 }
 
-h1 {
-    font-family: 'Roboto', sans-serif; /* Different font */
-    font-size: 36px;
+/* App Title */
+.app-title {
+    font-size: 30px;
     font-weight: 700;
-    margin-top: 10px;
-    color: #00A8E1; /* Hotstar Blue */
+    color: #00A8E1; /* Unique color for the title */
+    margin-bottom: 40px;
 }
 
-/* Slider for movie posters */
-.slider {
-    margin-top: 20px;
+/* Footer Styling */
+.footer {
+    position: relative;
+    margin-top: 40px;
+}
+
+/* YouTube Button Links */
+.youtube-links {
     display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    justify-content: space-around;
+    margin-bottom: 30px;
 }
 
-.slider img {
-    width: 250px;
-    height: 375px;
-    margin: 0 10px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.slider img:hover {
-    transform: scale(1.1);
-}
-
-/* Updated buttons */
-.links {
-    margin-top: 20px;
-}
-
-.links a {
+.youtube-button {
+    background-color: #1F80E0; /* Hotstar themed blue */
     color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    display: flex;
-    align-items: center;
-    background-color: #1F80E0; /* Hotstar themed button */
     padding: 10px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
 }
 
-.links a:hover {
+.youtube-button:hover {
     background-color: #00A8E1;
 }
 
-.links img {
-    width: 20px; /* Icon size */
-    margin-right: 10px; /* Space between icon and text */
+/* Personal Logo */
+.personal-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #E1E5EB;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
 }
