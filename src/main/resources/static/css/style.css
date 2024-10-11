@@ -5,19 +5,23 @@ body {
     text-align: center;
     margin: 0; /* Remove default margin */
 }
+
 .container {
     padding: 20px;
     max-width: 800px; /* Maximum width */
     margin: auto; /* Center the container */
 }
+
 img.logo {
     width: 250px; /* Adjusted logo width */
     margin-top: 20px; /* Margin above logo */
 }
+
 h1 {
     font-size: 2.5em; /* Title font size */
     margin: 20px 0; /* Margin around the title */
 }
+
 select {
     padding: 10px;
     margin: 20px 0;
@@ -27,6 +31,7 @@ select {
     color: #ffffff;
     font-size: 1em; /* Font size */
 }
+
 .song-item {
     margin: 10px 0;
     color: #ffffff;
@@ -34,15 +39,31 @@ select {
     justify-content: center; /* Center align */
     align-items: center; /* Align vertically */
 }
+
+.visualizer {
+    display: flex;
+    justify-content: center; /* Center align */
+    margin-top: 20px;
+}
+
+.bar {
+    width: 5px; /* Width of each bar */
+    background-color: #1DB954; /* Spotify green */
+    margin: 0 2px; /* Spacing between bars */
+    transition: height 0.2s; /* Smooth height transition */
+}
+
 .social-icons {
     margin: 20px 0;
 }
+
 .social-icons a {
     margin: 10px;
     text-decoration: none;
     color: #ffffff;
     font-size: 16px;
 }
+
 .profile-img {
     width: 100px;
     height: 100px;
@@ -50,6 +71,7 @@ select {
     display: block;
     margin: 20px auto;
 }
+
 button {
     padding: 5px 10px;
     background-color: #1DB954; /* Spotify green */
@@ -60,6 +82,5 @@ button {
     font-size: 1em; /* Button font size */
     margin-left: 10px; /* Margin left for spacing */
 }
+
 button:hover {
-    background-color: #1aa34a; /* Darker green for hover */
-}
