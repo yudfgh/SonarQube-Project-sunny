@@ -1,24 +1,28 @@
 const songs = {
     Telugu: { 
         title: "Chuttamalle (from Devara Part 1)", 
-        url: "https://github.com/KastroVKiran/songs-spotify-project/blob/main/Chuttamalle.mp3", 
+        url: "https://raw.githubusercontent.com/KastroVKiran/songs-spotify-project/main/Chuttamalle.mp3", 
+        image: "https://cdn.pixabay.com/photo/2018/05/08/21/29/spotify-3384019_1280.png" 
     },
     Tamil: { 
         title: "Tiger Ka Hukum", 
-        url: "https://github.com/KastroVKiran/songs-spotify-project/blob/main/Hukum.mp3", 
+        url: "https://raw.githubusercontent.com/KastroVKiran/songs-spotify-project/main/TigerKaHukum.mp3", 
         image: "https://cdn.pixabay.com/photo/2018/05/08/21/29/spotify-3384019_1280.png" 
     },
     Malayalam: { 
         title: "Aethu Kari Raavilum", 
-        url: "https://github.com/KastroVKiran/songs-spotify-project/blob/main/Aethu-Kari-Raavilum-Haricharan.mp3",  
+        url: "https://raw.githubusercontent.com/KastroVKiran/songs-spotify-project/main/AethuKariRaavilum.mp3", 
+        image: "https://cdn.pixabay.com/photo/2018/05/08/21/29/spotify-3384019_1280.png" 
     },
     Kannada: { 
         title: "Salaam Rocky Bhai", 
-        url: "https://github.com/KastroVKiran/songs-spotify-project/blob/main/Salaam%20Rocky%20Bhai%20-%20SenSongsMp3.Co.mp3",  
+        url: "https://raw.githubusercontent.com/KastroVKiran/songs-spotify-project/main/SalaamRockyBhai.mp3", 
+        image: "https://cdn.pixabay.com/photo/2018/05/08/21/29/spotify-3384019_1280.png" 
     },
     Hindi: { 
         title: "Yeh Raatein Yeh Mausam", 
-        url: "https://github.com/KastroVKiran/songs-spotify-project/blob/main/Yeh%20Raaten%20Yeh%20Mausam%20-%20Sanam%20and%20Simran%20Sehgal.mp3", 
+        url: "https://raw.githubusercontent.com/KastroVKiran/songs-spotify-project/main/YehRaateinYehMausam.mp3", 
+        image: "https://cdn.pixabay.com/photo/2018/05/08/21/29/spotify-3384019_1280.png" 
     }
 };
 
