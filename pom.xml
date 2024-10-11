@@ -9,11 +9,10 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <spring-boot.version>3.1.0</spring-boot.version> <!-- Set the version of Spring Boot -->
+        <spring-boot.version>3.1.0</spring-boot.version>
     </properties>
 
     <dependencies>
-        <!-- Spring Boot Starter dependency with logback exclusion -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -26,14 +25,12 @@
             </exclusions>
         </dependency>
 
-        <!-- Spring Boot Starter for Web (if it's a web application) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
 
-        <!-- Spring Boot Testing dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -41,18 +38,16 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- SLF4J Simple Logger (for non-conflicting SLF4J logging) -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.36</version>
-            <scope>runtime</scope>  <!-- Ensure it's included at runtime -->
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -60,13 +55,12 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>repackage</goal> <!-- Ensures the JAR is repackaged as executable -->
+                            <goal>repackage</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
 
-            <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
