@@ -1,95 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Clone</title>
+    <title>Kastro's Spotify App</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- For icons -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #ffffff;
-        }
-
-        header {
-            background-color: #1db954;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        header img {
-            height: 50px;
-            margin-right: 20px;
-        }
-
         .container {
-            padding: 20px;
-        }
-
-        .song {
-            padding: 15px;
-            background-color: #282828;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .song h3 {
-            margin: 0;
-            font-size: 18px;
-        }
-
-        .song p {
-            margin: 0;
-            color: #b3b3b3;
-        }
-
-        footer {
             text-align: center;
-            padding: 20px;
-            background-color: #1db954;
+            margin: 20px;
         }
-
-        footer p {
-            margin: 0;
+        .social-icons {
+            margin: 20px;
+        }
+        .social-icons a {
+            margin: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto;
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_with_text.svg" alt="Spotify Logo">
-        <h1>Spotify Clone</h1>
-    </header>
-
     <div class="container">
-        <h2>Now Playing</h2>
-        <div class="song">
-            <h3>Song Title 1</h3>
-            <p>Artist Name 1</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Spotify_logo_with_text.svg" alt="Spotify Logo" width="200">
+        <h1>This is Kastro</h1>
+        
+        <label for="language">Choose Language:</label>
+        <select id="language">
+            <option value="">Select a language</option>
+            <option value="Telugu">Telugu</option>
+            <option value="Tamil">Tamil</option>
+            <option value="Malayalam">Malayalam</option>
+            <option value="Kannada">Kannada</option>
+            <option value="Hindi">Hindi</option>
+        </select>
+
+        <div id="song-list" style="margin-top: 20px;"></div>
+        
+        <div class="social-icons">
+            <a href="https://www.youtube.com/playlist?list=PLs-PsDpuAuTeNx3OgGQ1QrpNBo-XE6VBh" target="_blank">
+                <button>Docker by Kastro</button>
+            </a>
+            <a href="https://www.youtube.com/watch?v=opJAfDOCZuI" target="_blank">
+                <button>Nexus by Kastro</button>
+            </a>
+            <a href="https://www.linkedin.com/in/kastro-kiran/" target="_blank">
+                <button>Connect with me</button>
+            </a>
         </div>
-        <div class="song">
-            <h3>Song Title 2</h3>
-            <p>Artist Name 2</p>
-        </div>
-        <div class="song">
-            <h3>Song Title 3</h3>
-            <p>Artist Name 3</p>
-        </div>
-        <div class="song">
-            <h3>Song Title 4</h3>
-            <p>Artist Name 4</p>
-        </div>
+
+        <img class="profile-img" src="https://media.licdn.com/dms/image/v2/D5603AQHJB_lF1d9OSw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718971147172?e=1733961600&v=beta&t=c5vIr7AI17HYzQ150SHGoz2AJ04Sfj_mIA80iZCpJdo" alt="Kastro's Profile Picture">
     </div>
 
-    <footer>
-        <p>&copy; 2024 Spotify Clone. All rights reserved.</p>
-    </footer>
-</body>
+    <script>
+        const songs = {
+            Telugu: { title: "Latest Telugu Song", url: "https://www.youtube.com/watch?v=sample_telugu", icon: "▶️" },
+            Tamil: { title: "Latest Tamil Song", url: "https://www.youtube.com/watch?v=sample_tamil", icon: "▶️" },
+            Malayalam: { title: "Latest Malayalam Song", url: "https://www.youtube.com/watch?v=sample_malayalam", icon: "▶️" },
+            Kannada: { title: "Latest Kannada Song", url: "https://www.youtube.com/watch?v=sample_kannada", icon: "▶️" },
+            Hindi: { title: "Latest Hindi Song", url: "https://www.youtube.com/watch?v=sample_hindi", icon: "▶️" }
+        };
 
+        document.getElementById("language").addEventListener("change", function () {
+            const selectedLang = this.value;
+            const songListDiv = document.getElementById("song-list");
+            songListDiv.innerHTML = ""; // Clear previous songs
+
+            if (selectedLang in songs) {
+                const song = songs[selectedLang];
+                const songItem = document.createElement("div");
+                songItem.innerHTML = `${song.title} <a href="${song.url}" target="_blank">${song.icon}</a>`;
+                songListDiv.appendChild(songItem);
+            }
+        });
+    </script>
+</body>
 </html>
