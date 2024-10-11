@@ -13,7 +13,7 @@ body {
 }
 
 img.logo {
-    width: 250px; /* Adjusted logo width */
+    width: 200px; /* Adjusted logo width */
     margin-top: 20px; /* Margin above logo */
 }
 
@@ -84,3 +84,4 @@ button {
 }
 
 button:hover {
+    background-color: #1ed760; /* Darker green on hover */
